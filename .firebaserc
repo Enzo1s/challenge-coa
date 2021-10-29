@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "challenge-coa-3bcec": {
+      "hosting": {
+        "challenge-coa": [
+          "challenge-coa-3bcec"
+        ]
+      }
+    }
+  }
+}
