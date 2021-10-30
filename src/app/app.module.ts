@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
