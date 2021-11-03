@@ -1,6 +1,4 @@
-import { Status } from "./Status";
-
-export interface ICart {
-    id:number,
-    status:Status
+export interface Cart {
+    id:string,
+    status:string
 }

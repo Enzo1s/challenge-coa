@@ -1,1 +1,8 @@
-<p>cart works!</p>
+<div *ngIf="carts.length > 0; else create">
+  <ag-grid-angular style="width: auto; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+    [columnDefs]="columnDefs">
+  </ag-grid-angular>
+</div>
+<ng-template #create>
+  <div><button>Create Cart</button></div>
+</ng-template>

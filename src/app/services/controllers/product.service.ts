@@ -10,15 +10,15 @@ import { PublicService } from '../public.service';
 export class ProductService {
 
   constructor(
-    private publicService: PublicService,
-    private privateService: PrivateService
-    ) { }
+    private _publicService: PublicService,
+    private _privateService: PrivateService
+  ) { }
 
   getAllProduct(): Observable<Product[]> {
-    return this.publicService.get<Product>('products')
+    return this._publicService.get<Product>('products')
   }
 
   postProduct(product: Product): Observable<Product> {
-    return from(this.privateService.post<Product>(product, 'products'));
+    return from(this._privateService.post<Product>(product, 'products'));
   }
 }

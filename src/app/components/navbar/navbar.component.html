@@ -1,1 +1,23 @@
-<p>navbar works!</p>
+<nav>
+    <div class="navbar">
+        <div>
+            <a routerLink="/home">Home</a>
+            <button *ngIf="logged" routerLink="/products-list">Product List</button>
+            <button *ngIf="logged" routerLink="/cart-list">Cart</button>
+        </div>
+        <div *ngIf="!logged">
+            <button (click)="singIn()">Sign in</button>
+            <button (click)="singUp()">Sign up</button>
+        </div>
+        <div *ngIf="logged">
+            <button (click)="singOut()">Sign Out</button>
+        </div>
+    </div>
+</nav>
+
+<ng-template #login>
+    <app-login (response)="sessionStatus()"></app-login>
+</ng-template>
+<ng-template #register>
+    <app-register (response)="sessionStatus()"></app-register>
+</ng-template>

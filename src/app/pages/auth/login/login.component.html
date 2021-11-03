@@ -1,0 +1,9 @@
+<div>
+    <div class="ctn-btn-close">
+    <button class="button-close" mat-button mat-dialog-close (click)="returnRes()"><i class="far fa-times-circle"></i></button>
+</div>
+    <form [formGroup]="form" (ngSubmit)="logIn(model)">
+        <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+        <button type="submit" class="btn" mat-button mat-dialog-close [disabled]="!form.valid">Sign In</button>
+    </form>
+</div>
